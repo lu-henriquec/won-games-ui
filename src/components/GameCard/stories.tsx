@@ -11,7 +11,8 @@ export default {
     price: 'R$ 235,00'
   },
   argTypes: {
-    onFav: { action: 'clicked' }
+    onFav: { action: 'clicked' },
+    ribbon: { type: 'string' }
   },
   parameters: {
     backgrounds: {
