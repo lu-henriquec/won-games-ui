@@ -5,6 +5,9 @@ import Button, { ButtonProps } from '.'
 export default {
   title: 'Button',
   component: Button,
+  args: {
+    children: 'Buy now'
+  },
   argTypes: {
     children: {
       type: 'string'
@@ -17,15 +20,10 @@ export default {
 
 export const Default: Story<ButtonProps> = (args) => <Button {...args} />
 
-Default.args = {
-  children: 'Buy now'
-}
-
 export const withIcon: Story<ButtonProps> = (args) => <Button {...args} />
 
 withIcon.args = {
   size: 'small',
-  children: 'Buy now',
   icon: <AddShoppingCart />
 }
 
@@ -33,7 +31,12 @@ export const asLink: Story = (args) => <Button {...args} />
 
 asLink.args = {
   size: 'large',
-  children: 'Buy now',
   as: 'a',
   href: '/link'
+}
+
+export const minimal: Story = (args) => <Button {...args} />
+
+minimal.args = {
+  minimal: true
 }
