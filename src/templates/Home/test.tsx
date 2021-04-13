@@ -13,4 +13,19 @@ describe('<Home />', () => {
       screen.getByRole('heading', { name: /contact us/i })
     ).toBeInTheDocument()
   })
+
+  it('should render sections', () => {
+    renderWithTheme(<Home />)
+
+    expect(screen.getByRole('heading', { name: /news/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /Most Popular/i })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /Upcoming/i })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /Free Games/i })
+    ).toBeInTheDocument()
+  })
 })
